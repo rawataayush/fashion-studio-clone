@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  background-color: rgb(18, 18, 18);
+}
+
+main {
+  width: 100%;
+  padding: 1rem;
+}
+main .hero {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+main .hero .img-section {
+  margin-top: 1rem;
+}
+main .hero .img-section img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+}
+main .text-section {
+  width: 100%;
+  padding: 1.5rem;
+  border-radius: 10px;
+  background-color: rgb(30, 30, 30);
+}
+main .text-section h2 {
+  font-size: 0.9rem;
+  padding-bottom: 3.5rem;
+  margin-top: 1rem;
+  color: #ececec;
+  font-weight: 500;
+}
+main .text-section h1 {
+  font-size: 2.1rem;
+  color: rgba(236, 236, 236, 0.8941176471);
+  font-weight: 100;
+  text-transform: uppercase;
+  line-height: 1.3;
+}
+main .text-section p {
+  font-size: 1.4rem;
+  color: rgba(174, 174, 174, 0.6509803922);
+  font-weight: 300;
+  line-height: 1.4;
+  padding: 1rem 0;
+}
+main .text-section button {
+  border: none;
+  background-color: transparent;
+  color: #ececec;
+  font-size: 0.9rem;
+  font-weight: 300;
+  text-align: left;
+  margin-top: 1rem;
+}
+main .text-section button i {
+  border-radius: 50%;
+  border: 2px solid rgba(92, 92, 92, 0.397);
+  background-color: rgba(111, 111, 111, 0.2470588235);
+  padding: 0.7rem;
+  margin-right: 0.5rem;
+  font-weight: 100;
+  font-size: 0.9rem;
+}
+main .works-info {
+  padding: 1.8rem 1rem;
+  text-align: center;
+}
+main .works-info .info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  line-height: 1.4;
+  padding-bottom: 1rem;
+}
+main .works-info .info .info1 {
+  font-weight: 100;
+  width: 40%;
+}
+main .works-info .info .info1 .title {
+  font-size: 0.9rem;
+  color: rgba(174, 174, 174, 0.6509803922);
+  text-transform: uppercase;
+}
+main .works-info .info .info1 h1 {
+  font-size: 2.3rem;
+  font-weight: 100;
+  color: rgba(236, 236, 236, 0.8941176471);
+  padding-top: 0.5rem;
+}
+main .works-info .info .info2 {
+  font-weight: 100;
+  width: 40%;
+}
+main .works-info .info .info2 .title {
+  font-size: 0.9rem;
+  color: rgba(174, 174, 174, 0.6509803922);
+  text-transform: uppercase;
+}
+main .works-info .info .info2 h1 {
+  font-size: 2.3rem;
+  font-weight: 100;
+  color: rgba(236, 236, 236, 0.8941176471);
+  padding-top: 0.5rem;
+}
+main .works-info:nth-child(1) {
+  padding-bottom: 1rem;
+}/*# sourceMappingURL=style.css.map */
