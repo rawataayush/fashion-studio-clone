@@ -119,4 +119,116 @@ main .works-info .info .info2 h1 {
 }
 main .works-info:nth-child(1) {
   padding-bottom: 1rem;
+}
+main .philosophy-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+main .philosophy-section .img-section {
+  margin-top: 1rem;
+}
+main .philosophy-section .img-section img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+}
+main .philosophy-section .text-section {
+  width: 100%;
+  padding: 1.5rem;
+  border-radius: 10px;
+  background-color: rgb(30, 30, 30);
+}
+main .philosophy-section .text-section h2 {
+  font-size: 0.9rem;
+  padding-bottom: 3.5rem;
+  margin-top: 1rem;
+  color: #ececec;
+  font-weight: 500;
+}
+main .philosophy-section .text-section h1 {
+  font-size: 2rem;
+  color: #ececec;
+  font-weight: 100;
+  text-transform: uppercase;
+  line-height: 1.3;
+}
+main .philosophy-section .text-section p {
+  font-size: 1.1rem;
+  color: rgba(174, 174, 174, 0.6509803922);
+  font-weight: 300;
+  line-height: 1.4;
+  padding: 1rem 0;
+  word-spacing: 4px;
+}
+main .vision-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+main .vision-section .img-section {
+  margin-top: 1rem;
+}
+main .vision-section .img-section img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+}
+main .vision-section .text-section {
+  width: 100%;
+  padding: 1.5rem;
+  border-radius: 10px;
+  background-color: rgb(30, 30, 30);
+}
+main .vision-section .text-section h2 {
+  font-size: 0.9rem;
+  padding-bottom: 3.5rem;
+  margin-top: 1rem;
+  color: #ececec;
+  font-weight: 500;
+}
+main .vision-section .text-section h1 {
+  font-size: 2rem;
+  color: #ececec;
+  font-weight: 100;
+  text-transform: uppercase;
+  line-height: 1.3;
+}
+main .vision-section .text-section p {
+  font-size: 1.1rem;
+  color: rgba(174, 174, 174, 0.6509803922);
+  font-weight: 300;
+  line-height: 1.4;
+  padding: 1rem 0;
+  word-spacing: 3.5px;
+}
+main .team-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-top: 1rem;
+}
+main .team-section .heading-section h1 {
+  font-size: 2rem;
+  color: #ececec;
+  font-weight: 100;
+  text-transform: uppercase;
+  line-height: 1.3;
+}
+main .team-section .team-members {
+  margin-top: 1rem;
+}
+main .team-section .team-members .member {
+  margin-top: 1rem;
+}
+main .team-section .team-members .member img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
 }/*# sourceMappingURL=style.css.map */
