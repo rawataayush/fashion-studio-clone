@@ -65,57 +65,57 @@ main{
                 @include img-styling();
             }
         }
-    }
 
-    .text-section{
-        width: 100%;
-        padding: 1.5rem;
-        border-radius: 10px;
-        background-color: rgb(30, 30, 30);
+            .text-section{
+                width: 100%;
+                padding: 1.5rem;
+                border-radius: 10px;
+                background-color: rgb(30, 30, 30);
 
-        h2{
-            font-size: 0.9rem;
-            padding-bottom: 3.5rem;
-            margin-top: 1rem;
-            color: #ececec;
-            font-weight: 500;
-            font-family: "chillax";
-        }
+                h2{
+                    font-size: 0.9rem;
+                    padding-bottom: 3.5rem;
+                    margin-top: 1rem;
+                    color: #ececec;
+                    font-weight: 500;
+                    font-family: "chillax";
+                }
 
-        h1{
-            font-size: 2.1rem;
-            color: #ececece4;
-            font-weight: 100;
-            text-transform: uppercase;
-            line-height: 1.3;
-            font-family: "satoshi";
-        }
+                h1{
+                    font-size: 2.1rem;
+                    color: #ececece4;
+                    font-weight: 100;
+                    text-transform: uppercase;
+                    line-height: 1.3;
+                    font-family: "satoshi";
+                }
 
-        p{
-            font-size: 1.4rem;
-            color: #aeaeaea6;
-            font-weight: 300;
-            line-height: 1.4;
-            padding: 1rem 0;
-            font-family: "satoshi";
-        }
+                p{
+                    font-size: 1.4rem;
+                    color: #aeaeaea6;
+                    font-weight: 300;
+                    line-height: 1.4;
+                    padding: 1rem 0;
+                    font-family: "satoshi";
+                }
 
-        button{
-            border: none;
-            background-color:transparent;
-            color: #ececec;
-            font-size: 0.9rem;
-            font-weight: 300;
-            font-family: "satoshi", Arial, Helvetica, sans-serif;
-            text-align: left;
-            margin-top: 1rem;
+                button{
+                    border: none;
+                    background-color:transparent;
+                    color: #ececec;
+                    font-size: 0.9rem;
+                    font-weight: 300;
+                    font-family: "satoshi", Arial, Helvetica, sans-serif;
+                    text-align: left;
+                    margin-top: 1rem;
 
-            i{
-                @include social-icons();
-                margin-right: 1rem;
+                    i{
+                        @include social-icons();
+                        margin-right: 1rem;
+                    }
+                }
             }
         }
-    }
 
     .works-info{
         padding: 1.8rem 1rem;
@@ -138,6 +138,7 @@ main{
                     font-size: 0.9rem;
                     color: #aeaeaea6;
                     text-transform: uppercase;
+                    font-family: "chillax", Arial, Helvetica, sans-serif;
                 }
 
                 h1{
@@ -145,6 +146,7 @@ main{
                     font-weight: 100;
                     color: #ececece4;
                     padding-top: 0.5rem;
+                    font-family: "satoshi", Arial, Helvetica, sans-serif;
                 }
                 
             }
@@ -169,15 +171,11 @@ main{
             }
         }
     }
-    .works-info:nth-child(1){
-        padding-bottom: 1rem;
-    }
-    
+
     .philosophy-section {
         @include flex-column();
 
         .img-section {
-            margin-top: 1rem;
 
             img{
                 @include img-styling();
