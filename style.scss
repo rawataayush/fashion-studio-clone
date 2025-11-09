@@ -339,10 +339,10 @@ main{
         }
     }
 
-    .team-join-section{
+    .job-section{
         @include flex-column();
 
-        .team-img{
+        .img-section{
             margin-top: 1.5rem;
 
             img{
@@ -353,8 +353,9 @@ main{
         .text-section{
             @include flex-column();
             text-transform: uppercase;
+            padding: 1.5rem;
             background-color: #1a1a1a;
-            border-radius: 1rem;
+            border-radius: 10px;
 
             h2{
                 font-size: 1rem;
@@ -708,7 +709,7 @@ footer{
             }
         }
 
-        .team-join-section{
+        .job-section{
             .text-section{
                 padding: 2rem;
 
@@ -921,7 +922,7 @@ footer{
             }
         }
         
-        .team-join-section{
+        .job-section{
             flex-direction: row;
             width: 100%;
 
@@ -929,7 +930,7 @@ footer{
                 height: auto;
                 width: 50%;
                 margin-top: 1rem;
-                background-color: #fff;
+
 
                 img{
                     height: 100%;
@@ -941,6 +942,7 @@ footer{
                 border-radius: 1rem;
                 margin-top: 1rem;
                 padding: 3rem;
+                width: 50%;
 
                 h1{
                     font-size: 1.8rem;
