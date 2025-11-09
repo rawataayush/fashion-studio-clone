@@ -56,7 +56,7 @@ main .hero .text-section h1 {
   font-weight: 100;
   text-transform: uppercase;
   line-height: 1.3;
-  font-family: "satoshi";
+  font-family: "chillax", Arial, Helvetica, sans-serif;
 }
 main .hero .text-section p {
   font-size: 1.4rem;
@@ -116,7 +116,7 @@ main .works-info .info .info1 h1 {
   font-weight: 100;
   color: rgba(236, 236, 236, 0.8941176471);
   padding-top: 0.5rem;
-  font-family: "satoshi", Arial, Helvetica, sans-serif;
+  font-family: "chillax", Arial, Helvetica, sans-serif;
 }
 main .works-info .info .info2 {
   font-weight: 100;
@@ -133,7 +133,7 @@ main .works-info .info .info2 h1 {
   font-weight: 100;
   color: rgba(236, 236, 236, 0.8941176471);
   padding-top: 0.5rem;
-  font-family: "satoshi", Arial, Helvetica, sans-serif;
+  font-family: "chillax", Arial, Helvetica, sans-serif;
 }
 main .philosophy-section {
   display: flex;
@@ -168,12 +168,14 @@ main .philosophy-section .text-section h1 {
   line-height: 1.3;
   font-family: "chillax", Arial, Helvetica, sans-serif;
 }
-main .philosophy-section .text-section p {
+main .philosophy-section .text-section .description {
+  padding: 1rem 0;
+}
+main .philosophy-section .text-section .description p {
   font-size: 1.1rem;
   color: rgba(174, 174, 174, 0.6509803922);
   font-weight: 300;
   line-height: 1.4;
-  padding: 1rem 0;
   word-spacing: 4px;
   font-family: "satoshi", Arial, Helvetica, sans-serif;
 }
@@ -318,6 +320,8 @@ main .team-join-section .text-section {
   flex-direction: column;
   gap: 0.8rem;
   text-transform: uppercase;
+  background-color: #1a1a1a;
+  border-radius: 1rem;
 }
 main .team-join-section .text-section h2 {
   font-size: 1rem;
@@ -395,7 +399,7 @@ main .contact-section button:hover {
 }
 
 footer {
-  margin: 1rem;
+  margin: 1rem 1rem 12rem 1rem;
 }
 footer .social-links-section {
   display: flex;
@@ -442,24 +446,29 @@ footer .footer-pages-section {
   padding: 1.5rem;
   border-radius: 10px;
 }
-footer .footer-pages-section h2 {
+footer .footer-pages-section .pages-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+footer .footer-pages-section .pages-section h2 {
   color: #dedede;
   text-transform: uppercase;
   font-weight: 100;
   font-family: "satoshi", Arial, Helvetica, sans-serif;
 }
-footer .footer-pages-section a {
+footer .footer-pages-section .pages-section a {
   color: rgba(174, 174, 174, 0.6509803922);
   text-decoration: none;
   text-transform: uppercase;
   width: -moz-fit-content;
   width: fit-content;
-  font-family: "chillax", Arial, Helvetica, sans-serif;
+  font-family: "satoshi", Arial, Helvetica, sans-serif;
 }
-footer .footer-pages-section a:hover {
+footer .footer-pages-section .pages-section a:hover {
   color: #dedede;
 }
-footer .footer-pages-section button {
+footer .footer-pages-section .pages-section button {
   background-color: #CEBD63;
   color: #121212;
   padding: 1rem;
@@ -469,8 +478,52 @@ footer .footer-pages-section button {
   text-transform: uppercase;
   font-family: "satoshi", Arial, Helvetica, sans-serif;
 }
-footer .footer-pages-section button:hover {
+footer .footer-pages-section .pages-section button:hover {
   background-color: rgba(206, 188, 99, 0.8980392157);
+}
+footer .footer-pages-section .cms-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+footer .footer-pages-section .cms-section h2 {
+  color: #dedede;
+  text-transform: uppercase;
+  font-weight: 100;
+  font-family: "satoshi", Arial, Helvetica, sans-serif;
+}
+footer .footer-pages-section .cms-section a {
+  color: rgba(174, 174, 174, 0.6509803922);
+  text-decoration: none;
+  text-transform: uppercase;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-family: "chillax", Arial, Helvetica, sans-serif;
+}
+footer .footer-pages-section .cms-section a:hover {
+  color: #dedede;
+}
+footer .footer-pages-section .utility-pages-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+footer .footer-pages-section .utility-pages-section h2 {
+  color: #dedede;
+  text-transform: uppercase;
+  font-weight: 100;
+  font-family: "satoshi", Arial, Helvetica, sans-serif;
+}
+footer .footer-pages-section .utility-pages-section a {
+  color: rgba(174, 174, 174, 0.6509803922);
+  text-decoration: none;
+  text-transform: uppercase;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-family: "chillax", Arial, Helvetica, sans-serif;
+}
+footer .footer-pages-section .utility-pages-section a:hover {
+  color: #dedede;
 }
 footer .madeby-section {
   margin-top: 1rem;
@@ -509,4 +562,330 @@ footer .madeby-section span i {
   transition: all ease 0.3s;
   cursor: pointer;
   margin-left: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  main .hero .text-section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    padding: 2.5rem;
+  }
+  main .hero .text-section h2 {
+    margin: 0;
+    padding-bottom: 7.5rem;
+  }
+  main .hero .text-section h1 {
+    font-size: 3.8rem;
+    font-weight: 400;
+    line-height: 1.1;
+  }
+  main .hero .text-section p {
+    padding: 0;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin-bottom: 1rem;
+  }
+  main .works-info .info {
+    padding: 1rem 4rem;
+  }
+  main .works-info .info .info1 .title {
+    font-weight: 600;
+  }
+  main .works-info .info .info1 h1 {
+    font-weight: 500;
+    font-size: 3.5rem;
+    padding: 0;
+  }
+  main .works-info .info .info2 .title {
+    font-weight: 600;
+  }
+  main .works-info .info .info2 h1 {
+    font-weight: 500;
+    font-size: 3.5rem;
+    padding: 0;
+  }
+  main .philosophy-section .text-section h1 {
+    font-size: 3rem;
+    margin-top: 3rem;
+  }
+  main .philosophy-section .text-section .description p {
+    font-size: 1.15rem;
+    -moz-column-count: 2;
+         column-count: 2;
+    -moz-column-gap: 2rem;
+         column-gap: 2rem;
+    text-align: left;
+    line-height: 1.35;
+    word-spacing: 7px;
+  }
+  main .vision-section .text-section .description p {
+    font-size: 1.15rem;
+    -moz-column-count: 2;
+         column-count: 2;
+    -moz-column-gap: 2rem;
+         column-gap: 2rem;
+    text-align: left;
+    line-height: 1.35;
+    word-spacing: 2px;
+  }
+  main .team-section .team-members {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  main .team-section .team-members .member {
+    width: 100%;
+  }
+  main .team-section .team-members .member img {
+    border-radius: 1rem;
+  }
+  main .team-section .team-members .member .social-links i {
+    color: rgba(172, 172, 172, 0.7411764706);
+    -webkit-backdrop-filter: blur(25px);
+            backdrop-filter: blur(25px);
+  }
+  main .team-section .team-members .member .member-info {
+    border-radius: 0.5rem;
+    width: 90%;
+  }
+  main .team-section .team-members .member .member-info h1 {
+    font-weight: 300;
+    font-size: 1.4rem;
+  }
+  main .team-join-section .text-section {
+    padding: 2rem;
+  }
+  main .team-join-section .text-section h1 {
+    font-size: 3rem;
+    margin-bottom: 3rem;
+  }
+  main .contact-section h2 {
+    font-weight: 600;
+  }
+  main .contact-section h1 {
+    font-size: 4rem;
+    width: 100%;
+    line-height: 1;
+  }
+  footer .social-links-section h2 {
+    margin-bottom: 5rem;
+  }
+  footer .social-links-section .social-links {
+    margin-bottom: 2rem;
+  }
+  footer .footer-pages-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  footer .footer-pages-section .pages-section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    gap: 2rem;
+  }
+  footer .footer-pages-section .pages-section a {
+    font-weight: 600;
+  }
+  footer .footer-pages-section .pages-section button {
+    width: -moz-fit-content;
+    width: fit-content;
+    font-weight: 600;
+    letter-spacing: 2px;
+    padding: 1.2rem;
+  }
+  footer .footer-pages-section .cms-section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    gap: 2rem;
+  }
+  footer .footer-pages-section .cms-section a {
+    font-weight: 600;
+  }
+  footer .footer-pages-section .utility-pages-section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    gap: 2rem;
+  }
+  footer .footer-pages-section .utility-pages-section a {
+    font-weight: 600;
+  }
+  footer .madeby-section {
+    flex-direction: row;
+    gap: 11rem;
+    padding: 2rem;
+  }
+  footer .madeby-section p {
+    font-weight: 600;
+    font-size: 0.9rem;
+    word-spacing: 3px;
+  }
+  footer .madeby-section span {
+    word-spacing: 3px;
+  }
+}
+@media (min-width: 1024px) {
+  main .hero {
+    flex-direction: row;
+    width: 100%;
+  }
+  main .hero .img-section {
+    width: 50%;
+    height: auto;
+  }
+  main .hero .img-section img {
+    height: 100%;
+    border-radius: 1rem;
+  }
+  main .hero .text-section {
+    border-radius: 1rem;
+    margin-top: 1rem;
+    padding: 3rem;
+    width: 50%;
+  }
+  main .hero .text-section h2 {
+    padding-bottom: 15rem;
+  }
+  main .hero .text-section h1 {
+    font-size: 3.2rem;
+  }
+  main .hero .text-section p {
+    font-size: 1.5rem;
+  }
+  main .works-info {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  main .works-info .info {
+    display: flex;
+    gap: 6rem;
+  }
+  main .philosophy-section {
+    flex-direction: row-reverse;
+    width: 100%;
+  }
+  main .philosophy-section .text-section {
+    border-radius: 1rem;
+    margin-top: 1rem;
+    padding: 3rem;
+    width: 50%;
+  }
+  main .philosophy-section .text-section h2 {
+    padding-bottom: 10rem;
+  }
+  main .philosophy-section .text-section h1 {
+    font-size: 2.2rem;
+  }
+  main .philosophy-section .text-section p {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  main .philosophy-section .img-section {
+    height: auto;
+    width: 50%;
+    margin-top: 1rem;
+  }
+  main .philosophy-section .img-section img {
+    height: 100%;
+    border-radius: 1rem;
+  }
+  main .vision-section {
+    flex-direction: row;
+    width: 100%;
+  }
+  main .vision-section .img-section {
+    height: auto;
+    width: 50%;
+  }
+  main .vision-section .img-section img {
+    height: 100%;
+  }
+  main .vision-section .text-section {
+    border-radius: 1rem;
+    margin-top: 1rem;
+    padding: 3rem;
+    width: 50%;
+  }
+  main .vision-section .text-section h2 {
+    padding-bottom: 10rem;
+  }
+  main .vision-section .text-section h1 {
+    font-size: 2.2rem;
+  }
+  main .vision-section .text-section p {
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+  }
+  main .team-section .team-members {
+    display: flex;
+    flex-direction: row;
+  }
+  main .team-section .team-members .member .member-info {
+    gap: 1rem;
+  }
+  main .team-join-section {
+    flex-direction: row;
+    width: 100%;
+  }
+  main .team-join-section .img-section {
+    height: auto;
+    width: 50%;
+    margin-top: 1rem;
+    background-color: #fff;
+  }
+  main .team-join-section .img-section img {
+    height: 100%;
+    border-radius: 1rem;
+  }
+  main .team-join-section .text-section {
+    border-radius: 1rem;
+    margin-top: 1rem;
+    padding: 3rem;
+  }
+  main .team-join-section .text-section h1 {
+    font-size: 1.8rem;
+  }
+  main .contact-section {
+    margin-top: 1rem;
+    padding: 3rem;
+    display: flex;
+    align-items: end;
+    gap: 3rem;
+  }
+  main .contact-section .heading h1 {
+    font-size: 3.5rem;
+    font-weight: 500;
+  }
+  main .contact-section button {
+    width: 30%;
+    margin: 0;
+  }
+  footer {
+    display: grid;
+    grid-template-columns: 20% 1fr;
+    grid-template-rows: auto auto;
+    gap: 1rem;
+    grid-template-areas: "social pages" "social madeby";
+  }
+  footer .social-links-section {
+    grid-area: social;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+  }
+  footer .social-links-section .social-links {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5em;
+    margin: 0;
+    padding: 0;
+  }
+  footer .madeby-section {
+    grid-area: madeby;
+    margin-top: 0;
+  }
 }/*# sourceMappingURL=style.css.map */

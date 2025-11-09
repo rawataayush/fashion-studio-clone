@@ -66,56 +66,56 @@ main{
             }
         }
 
-            .text-section{
-                width: 100%;
-                padding: 1.5rem;
-                border-radius: 10px;
-                background-color: rgb(30, 30, 30);
+        .text-section{
+            width: 100%;
+            padding: 1.5rem;
+            border-radius: 10px;
+            background-color: rgb(30, 30, 30);
 
-                h2{
-                    font-size: 0.9rem;
-                    padding-bottom: 3.5rem;
-                    margin-top: 1rem;
-                    color: #ececec;
-                    font-weight: 500;
-                    font-family: "chillax";
-                }
+            h2{
+                font-size: 0.9rem;
+                padding-bottom: 3.5rem;
+                margin-top: 1rem;
+                color: #ececec;
+                font-weight: 500;
+                font-family: "chillax";
+            }
 
-                h1{
-                    font-size: 2.1rem;
-                    color: #ececece4;
-                    font-weight: 100;
-                    text-transform: uppercase;
-                    line-height: 1.3;
-                    font-family: "satoshi";
-                }
+            h1{
+                font-size: 2.1rem;
+                color: #ececece4;
+                font-weight: 100;
+                text-transform: uppercase;
+                line-height: 1.3;
+                font-family: "chillax", Arial, Helvetica, sans-serif;
+            }
 
-                p{
-                    font-size: 1.4rem;
-                    color: #aeaeaea6;
-                    font-weight: 300;
-                    line-height: 1.4;
-                    padding: 1rem 0;
-                    font-family: "satoshi";
-                }
+            p{
+                font-size: 1.4rem;
+                color: #aeaeaea6;
+                font-weight: 300;
+                line-height: 1.4;
+                padding: 1rem 0;
+                font-family: "satoshi";
+            }
 
-                button{
-                    border: none;
-                    background-color:transparent;
-                    color: #ececec;
-                    font-size: 0.9rem;
-                    font-weight: 300;
-                    font-family: "satoshi", Arial, Helvetica, sans-serif;
-                    text-align: left;
-                    margin-top: 1rem;
+            button{
+                border: none;
+                background-color:transparent;
+                color: #ececec;
+                font-size: 0.9rem;
+                font-weight: 300;
+                font-family: "satoshi", Arial, Helvetica, sans-serif;
+                text-align: left;
+                margin-top: 1rem;
 
-                    i{
-                        @include social-icons();
-                        margin-right: 1rem;
-                    }
+                i{
+                    @include social-icons();
+                    margin-right: 1rem;
                 }
             }
         }
+    }
 
     .works-info{
         padding: 1.8rem 1rem;
@@ -146,7 +146,7 @@ main{
                     font-weight: 100;
                     color: #ececece4;
                     padding-top: 0.5rem;
-                    font-family: "satoshi", Arial, Helvetica, sans-serif;
+                    font-family: "chillax", Arial, Helvetica, sans-serif;
                 }
                 
             }
@@ -166,7 +166,7 @@ main{
                     font-weight: 100;
                     color: #ececece4;
                     padding-top: 0.5rem;
-                    font-family: "satoshi", Arial, Helvetica, sans-serif;
+                    font-family: "chillax", Arial, Helvetica, sans-serif;
                 }
             }
         }
@@ -205,14 +205,17 @@ main{
                 font-family: "chillax", Arial, Helvetica, sans-serif;
             }
 
-            p{
-                font-size: 1.1rem;
-                color: #aeaeaea6;
-                font-weight: 300;
-                line-height: 1.4;
+            .description{
                 padding: 1rem 0;
-                word-spacing: 4px;
-                font-family: "satoshi", Arial, Helvetica, sans-serif;
+
+                p{
+                    font-size: 1.1rem;
+                    color: #aeaeaea6;
+                    font-weight: 300;
+                    line-height: 1.4;
+                    word-spacing: 4px;
+                    font-family: "satoshi", Arial, Helvetica, sans-serif;
+                }
             }
         }
     }
@@ -350,6 +353,8 @@ main{
         .text-section{
             @include flex-column();
             text-transform: uppercase;
+            background-color: #1a1a1a;
+            border-radius: 1rem;
 
             h2{
                 font-size: 1rem;
@@ -431,7 +436,7 @@ main{
 }
 
 footer{
-    margin: 1rem;
+    margin: 1rem 1rem 12rem 1rem;
 
     .social-links-section{
             display: flex;
@@ -471,35 +476,76 @@ footer{
         padding: 1.5rem;
         border-radius: 10px;
 
-        h2{
-            @include heading-styling();
+        .pages-section{
+            @include flex-column();
+            h2{
+                @include heading-styling();
+            }
+            
+            a{
+                color: #aeaeaea6;
+                text-decoration: none;
+                text-transform: uppercase;
+                width: fit-content;
+                font-family: "satoshi", Arial, Helvetica, sans-serif;
+            }
+
+            a:hover{
+                color: #dedede;
+            }
+
+            button{
+                background-color: #CEBD63;
+                color: #121212;
+                padding: 1rem;
+                border-radius: 10px;
+                width: 100%;
+                font-size: 1rem;
+                text-transform: uppercase;
+                font-family: "satoshi", Arial, Helvetica, sans-serif;
+            }
+
+            button:hover{
+                background-color: #cebc63e5;
+            }
         }
+
+        .cms-section{
+            @include flex-column();
+            h2{
+                @include heading-styling();
+            }
         
-        a{
-            color: #aeaeaea6;
-            text-decoration: none;
-            text-transform: uppercase;
-            width: fit-content;
-            font-family: "chillax", Arial, Helvetica, sans-serif;
+            a{
+                color: #aeaeaea6;
+                text-decoration: none;
+                text-transform: uppercase;
+                width: fit-content;
+                font-family: "chillax", Arial, Helvetica, sans-serif;
+            }
+
+            a:hover{
+                color: #dedede;
+            }
         }
 
-        a:hover{
-            color: #dedede;
-        }
+        .utility-pages-section{
+            @include flex-column();
+            h2{
+                @include heading-styling();
+            }
+        
+            a{
+                color:  #aeaeaea6;
+                text-decoration: none;
+                text-transform: uppercase;
+                width: fit-content;
+                font-family: "chillax", Arial, Helvetica, sans-serif;
+            }
 
-        button{
-            background-color: #CEBD63;
-            color: #121212;
-            padding: 1rem;
-            border-radius: 10px;
-            width: 100%;
-            font-size: 1rem;
-            text-transform: uppercase;
-            font-family: "satoshi", Arial, Helvetica, sans-serif;
-        }
-
-        button:hover{
-            background-color: #cebc63e5;
+            a:hover{
+                color: #dedede;
+            }
         }
     }
 
@@ -534,6 +580,422 @@ footer{
                 @include social-icons();
                 margin-left: 0.5rem;
             }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    main{
+        .hero{
+            .text-section{
+                @include flex-column();
+                padding: 2.5rem;
+
+                h2{
+                    margin: 0;
+                    padding-bottom: 7.5rem;
+                }
+                
+                h1{
+                    font-size: 3.8rem;
+                    font-weight: 400;
+                    line-height: 1.1;
+                }
+
+                p{
+                    padding: 0;
+                    width: fit-content;
+                    margin-bottom: 1rem;
+                }
+            }
+        }
+
+        .works-info{
+            .info{
+                padding: 1rem 4rem;
+                .info1{
+                    .title{
+                        font-weight: 600;
+                    }
+
+                    h1{
+                        font-weight: 500;
+                        font-size: 3.5rem;
+                        padding: 0;
+                    }
+                }
+
+                .info2{
+                    .title{
+                        font-weight: 600;
+                    }
+
+                    h1{
+                        font-weight: 500;
+                        font-size: 3.5rem;
+                        padding: 0;
+                    }
+                }
+            }
+        }
+
+        .philosophy-section{
+            .text-section{
+                h1{
+                    font-size: 3rem;
+                    margin-top: 3rem;
+                }
+
+                .description{
+
+                    p{
+                        font-size: 1.15rem;
+                        column-count: 2;
+                        column-gap: 2rem;
+                        text-align: left;
+                        line-height: 1.35;
+                        word-spacing: 7px;
+                    }
+                }
+            }
+        }
+
+        .vision-section{
+            .text-section{
+                .description{
+                    p{
+                        font-size: 1.15rem;
+                        column-count: 2;
+                        column-gap: 2rem;
+                        text-align: left;
+                        line-height: 1.35;
+                        word-spacing: 2px;
+                    }
+                }
+            }
+        }
+
+        .team-section{
+            .team-members{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 1rem;
+
+                .member{
+                    width: 100%;
+
+                    img{
+                        border-radius: 1rem;
+                    }
+
+                    .social-links{
+                        i{
+                            color: #acacacbd;
+                            backdrop-filter: blur(25px);
+                        }
+                    }
+
+                    .member-info{
+                        border-radius: 0.5rem;
+                        width: 90%;
+
+                        h1{
+                            font-weight: 300;
+                            font-size: 1.4rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        .team-join-section{
+            .text-section{
+                padding: 2rem;
+
+                h1{
+                    font-size: 3rem;
+                    margin-bottom: 3rem;
+                }
+            }
+        }
+
+        .contact-section{
+            h2{
+                font-weight: 600;
+            }
+
+            h1{
+                font-size: 4rem;
+                width: 100%;
+                line-height: 1;
+            }
+        }
+    }
+
+    footer{
+        .social-links-section{
+            h2{
+                margin-bottom: 5rem;
+            }
+            .social-links{
+                margin-bottom: 2rem;
+            }
+        }
+
+        .footer-pages-section{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+
+            .pages-section{
+                @include flex-column();
+                gap: 2rem;
+
+                a{
+                    font-weight: 600;
+                }
+                button{
+                    width: fit-content;
+                    font-weight: 600;
+                    letter-spacing: 2px;
+                    padding: 1.2rem;
+                }
+            }
+
+            .cms-section{
+                @include flex-column();
+                gap: 2rem;
+
+                a{
+                    font-weight: 600;
+                }
+            }
+
+            .utility-pages-section{
+                @include flex-column();
+                gap: 2rem;
+
+                a{
+                    font-weight: 600;
+                }
+            }
+        }
+
+        .madeby-section{
+            flex-direction: row;
+            gap: 11rem;
+            padding: 2rem;
+
+            p{
+                font-weight: 600;
+                font-size: 0.9rem;
+                word-spacing: 3px;
+            }
+            span {
+                word-spacing: 3px;
+            };
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    main{
+        .hero{
+            flex-direction: row;
+            width: 100%;
+
+            .img-section{
+                width: 50%;
+                height: auto;
+                img{
+                    height: 100%;
+                    border-radius: 1rem;
+                }
+            }
+
+            .text-section{
+                border-radius: 1rem;
+                margin-top: 1rem;
+                padding: 3rem;
+                width: 50%;
+
+                h2{
+                    padding-bottom: 15rem;
+                }
+                h1{
+                    font-size: 3.2rem;
+                }
+
+                p{
+                    font-size: 1.5rem;
+                }
+            }
+        }
+
+        .works-info{
+            display: flex;
+            justify-content: space-evenly;
+            .info{
+                display: flex;
+                gap: 6rem;
+            }
+        }
+
+        .philosophy-section{
+            flex-direction: row-reverse;
+            width: 100%;
+    
+            .text-section{
+                border-radius: 1rem;
+                margin-top: 1rem;
+                padding: 3rem;
+                width: 50%;
+
+                h2{
+                    padding-bottom: 10rem;
+                }
+
+                h1{
+                    font-size: 2.2rem;
+                }
+
+                p{
+                    font-size: 1.5rem;
+                    font-weight: 600;
+                }
+            }
+            .img-section{
+                height: auto;
+                width: 50%;
+                margin-top: 1rem;
+                img{
+                    height: 100%;
+                    border-radius: 1rem;
+                }
+            }
+        }
+
+        .vision-section{
+            flex-direction: row;
+            width: 100%;
+
+            .img-section{
+                height: auto;
+                width: 50%;
+                img{
+                    height: 100%;
+                }
+            }
+
+            .text-section{
+                border-radius: 1rem;
+                margin-top: 1rem;
+                padding: 3rem;
+                width: 50%;
+
+                h2{
+                    padding-bottom: 10rem;
+                }
+
+                h1{
+                    font-size: 2.2rem;
+                }
+
+                p{
+                    font-size: 1.5rem;
+                    font-weight: 600;
+                    letter-spacing: 2px;
+                }
+            }
+        }
+
+        .team-section{
+            .team-members{
+                display: flex;
+                flex-direction: row;
+                
+                .member{
+                    .member-info{
+                        gap: 1rem;
+                    }
+                }
+            }
+        }
+        
+        .team-join-section{
+            flex-direction: row;
+            width: 100%;
+
+            .img-section{
+                height: auto;
+                width: 50%;
+                margin-top: 1rem;
+                background-color: #fff;
+
+                img{
+                    height: 100%;
+                    border-radius: 1rem;
+                }
+            }
+
+            .text-section{
+                border-radius: 1rem;
+                margin-top: 1rem;
+                padding: 3rem;
+
+                h1{
+                    font-size: 1.8rem;
+                }
+            }
+        }
+
+        .contact-section{
+            margin-top: 1rem;
+            padding: 3rem;
+            display: flex;
+            align-items: end;
+            gap: 3rem;
+
+            .heading{
+                h1{
+                    font-size: 3.5rem;
+                    font-weight: 500;
+                }
+            }
+            
+            button{
+                width: 30%;
+                margin: 0;
+            }
+        }
+    }
+
+    footer{
+        display: grid;
+        grid-template-columns: 20% 1fr;
+        grid-template-rows: auto auto;
+        gap: 1rem;
+        grid-template-areas: "social pages"
+                                                "social madeby";
+
+        .social-links-section{
+            grid-area: social;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 1rem;
+
+            .social-links{
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                gap: 0.5em;
+                margin: 0;
+                padding: 0;
+            }
+        }
+
+        .madeby-section{
+            grid-area: madeby;
+            margin-top: 0;
         }
     }
 }
