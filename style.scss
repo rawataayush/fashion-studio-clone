@@ -43,12 +43,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
 
 html, body{
     height: 100%;
     width: 100%;
     background-color: rgb(18, 18, 18);
+    scroll-behavior: smooth;
 }
 
 main{
@@ -818,7 +820,6 @@ footer{
     }
 }
 
-
 // For Small Screen Laptops
 
 @media (min-width: 1024px) {
@@ -1279,6 +1280,8 @@ footer{
         }
     }
 }
+
+// For 4k Screen Devices
 
 @media (min-width: 2560px) {
     body{
