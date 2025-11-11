@@ -55,7 +55,7 @@ main{
     width: 100%;
     padding: 01rem;
 
-    .hero{
+    .hero-section{
         @include flex-column();
 
         .img-section{
@@ -117,51 +117,28 @@ main{
         }
     }
 
-    .works-info{
+    .stats-section{
         padding: 1.8rem 1rem;
-        text-align: center;
-
-        .info{
+        
+        .stats-container{
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 2rem;
-            line-height: 1.4;
-            padding-bottom: 1rem;
 
-            .info1{
+            .stats-item{
                 font-weight: 100;
                 width: 40%;
+                text-align: center;
 
 
-                .title{
+                .stat-label{
                     font-size: 0.9rem;
                     color: #aeaeaea6;
                     text-transform: uppercase;
                     font-family: "chillax", Arial, Helvetica, sans-serif;
                 }
 
-                h1{
-                    font-size: 2.3rem;
-                    font-weight: 100;
-                    color: #ececece4;
-                    padding-top: 0.5rem;
-                    font-family: "chillax", Arial, Helvetica, sans-serif;
-                }
-                
-            }
-            .info2{
-                font-weight: 100;
-                width: 40%;
-                
-                .title{
-                    font-size: 0.9rem;
-                    color: #aeaeaea6;
-                    text-transform: uppercase; 
-                    font-family: "chillax", Arial, Helvetica, sans-serif;
-                }
-
-                h1{
+                .stat-value{
                     font-size: 2.3rem;
                     font-weight: 100;
                     color: #ececece4;
@@ -271,12 +248,16 @@ main{
         @include flex-column();
         margin-top: 1.5rem;
 
-        .heading-section{
+        .label-section{
             margin-left: 1rem;
             h1{
                 @include heading-styling();
                 font-weight: 600;
                 font-size: 2rem;
+                font-family: "chillax", Arial, Helvetica, sans-serif;
+            }
+            .link{
+                display: none;
             }
         }
 
@@ -585,9 +566,11 @@ footer{
     }
 }
 
-@media (min-width: 768px) {
+// For Tablet Screen 
+
+@media (min-width: 768px) and (max-width: 1023px) {
     main{
-        .hero{
+        .hero-section{
             .text-section{
                 @include flex-column();
                 padding: 2.5rem;
@@ -611,27 +594,16 @@ footer{
             }
         }
 
-        .works-info{
-            .info{
-                padding: 1rem 4rem;
-                .info1{
-                    .title{
+        .stats-section{
+            .stats-container{
+                padding: 1rem 3.5rem;
+                .stats-item{
+                    .stat-label{
+                        font-size: 1rem;
                         font-weight: 600;
                     }
 
-                    h1{
-                        font-weight: 500;
-                        font-size: 3.5rem;
-                        padding: 0;
-                    }
-                }
-
-                .info2{
-                    .title{
-                        font-weight: 600;
-                    }
-
-                    h1{
+                    .stat-value{
                         font-weight: 500;
                         font-size: 3.5rem;
                         padding: 0;
@@ -677,6 +649,32 @@ footer{
         }
 
         .team-section{
+            .label-section{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 0 1rem;
+                h1{
+                    font-size: 2.8rem;
+                    font-weight: 500;
+                    font-family: "chillax", Arial, Helvetica, sans-serif;
+                }
+                .link{
+                    display: flex;
+                    align-items: center;
+                    text-align: center;
+                    gap: 1rem;
+
+                    i{
+                        @include social-icons();
+                    }
+                    span{
+                        color: #ececec;
+                        font-family: "satoshi", Arial, Helvetica, sans-serif;
+                        text-transform: uppercase;
+                    }
+                }
+            }
             .team-members{
                 display: grid;
                 grid-template-columns: 1fr 1fr;
@@ -684,9 +682,12 @@ footer{
 
                 .member{
                     width: 100%;
+                    border-radius: 1rem;
+
 
                     img{
                         border-radius: 1rem;
+                        height: 100%;
                     }
 
                     .social-links{
@@ -711,8 +712,11 @@ footer{
 
         .job-section{
             .text-section{
-                padding: 2rem;
-
+                padding: 2rem 2.5rem;
+                h2{
+                    margin-top: 1rem;
+                    padding: 0;
+                }
                 h1{
                     font-size: 3rem;
                     margin-bottom: 3rem;
@@ -746,10 +750,16 @@ footer{
         .footer-pages-section{
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
+            padding: 2rem;
 
             .pages-section{
                 @include flex-column();
                 gap: 2rem;
+
+                h2{
+                    font-family: "chillax", Arial, Helvetica, sans-serif;
+                    font-size: 1.3rem;
+                }
 
                 a{
                     font-weight: 600;
@@ -766,6 +776,11 @@ footer{
                 @include flex-column();
                 gap: 2rem;
 
+                h2{
+                    font-family: "chillax", Arial, Helvetica, sans-serif;
+                    font-size: 1.3rem;
+                }
+
                 a{
                     font-weight: 600;
                 }
@@ -774,6 +789,11 @@ footer{
             .utility-pages-section{
                 @include flex-column();
                 gap: 2rem;
+
+                h2{
+                    font-family: "chillax", Arial, Helvetica, sans-serif;
+                    font-size: 1.3rem;
+                }
 
                 a{
                     font-weight: 600;
@@ -798,9 +818,12 @@ footer{
     }
 }
 
+
+// For Small Screen Laptops
+
 @media (min-width: 1024px) {
     main{
-        .hero{
+        .hero-section{
             flex-direction: row;
             width: 100%;
 
@@ -820,24 +843,33 @@ footer{
                 width: 50%;
 
                 h2{
-                    padding-bottom: 15rem;
+                    padding-bottom: 10.5rem;
                 }
                 h1{
-                    font-size: 3.2rem;
+                    font-size: 3rem;
+                    line-height: 1.2;
                 }
 
                 p{
-                    font-size: 1.5rem;
+                    font-size: 1.3rem;
                 }
             }
         }
 
-        .works-info{
+        .stats-section{
             display: flex;
             justify-content: space-evenly;
-            .info{
-                display: flex;
-                gap: 6rem;
+            .stats-container{
+                gap: 7rem;
+                .stats-item{
+                    .stat-label{
+                        font-size: 0.96rem;
+                        word-spacing: 1px;
+                    }
+                    .stat-value{
+                        font-size: 3rem;
+                    }
+                }
             }
         }
 
@@ -848,22 +880,30 @@ footer{
             .text-section{
                 border-radius: 1rem;
                 margin-top: 1rem;
-                padding: 3rem;
+                padding: 2.5rem 3rem;
                 width: 50%;
 
                 h2{
-                    padding-bottom: 10rem;
+                    padding-bottom: 12rem;
                 }
 
                 h1{
                     font-size: 2.2rem;
+                    line-height: 1.2;
                 }
 
+            .description{
                 p{
-                    font-size: 1.5rem;
-                    font-weight: 600;
+                    font-size: 1.2rem;
+                    column-count: 2;
+                    column-gap: 2rem;
+                    text-align: left;
+                    line-height: 1.35;
                 }
             }
+                    
+        }
+
             .img-section{
                 height: auto;
                 width: 50%;
@@ -890,29 +930,62 @@ footer{
             .text-section{
                 border-radius: 1rem;
                 margin-top: 1rem;
-                padding: 3rem;
+                padding: 2rem 3rem;
                 width: 50%;
 
                 h2{
-                    padding-bottom: 10rem;
+                    padding-bottom: 12rem;
                 }
 
                 h1{
                     font-size: 2.2rem;
+                    line-height: 1.2;
                 }
 
                 p{
-                    font-size: 1.5rem;
-                    font-weight: 600;
-                    letter-spacing: 2px;
+                    font-size: 1.2rem;
+                    column-count: 2;
+                    column-gap: 2rem;
+                    text-align: left;
+                    line-height: 1.35;
+                    word-spacing: 4px;
                 }
             }
         }
 
         .team-section{
+            .label-section{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 1rem 2rem;
+                h1{
+                    font-weight: 500;
+                }
+
+                .link{
+                    display: flex;
+                    align-items: center;
+                    gap: 1rem;
+
+                    i{
+                        @include social-icons();
+                    }
+
+                    span{
+                        color: #ececec;
+                        font-family: "satoshi", Arial, Helvetica, sans-serif;
+                        font-size: 1rem;
+                        text-transform: uppercase;
+                        font-weight: 600;
+                    }
+                }
+            }
+
             .team-members{
                 display: flex;
                 flex-direction: row;
+                gap: 1rem;
                 
                 .member{
                     .member-info{
@@ -941,43 +1014,53 @@ footer{
             .text-section{
                 border-radius: 1rem;
                 margin-top: 1rem;
-                padding: 3rem;
+                padding: 2rem 3rem;
                 width: 50%;
 
                 h1{
-                    font-size: 1.8rem;
+                    font-size: 2rem;
+                    margin-bottom: 7rem;
                 }
             }
         }
 
         .contact-section{
             margin-top: 1rem;
-            padding: 3rem;
+            padding: 2rem 3rem;
             display: flex;
             align-items: end;
             gap: 3rem;
 
             .heading{
+
+                h2{
+                    font-weight: 600;
+                    font-size: 1rem;
+                }
                 h1{
                     font-size: 3.5rem;
                     font-weight: 500;
+                    width: fit-content;
+                    line-height: 1;
                 }
             }
             
             button{
                 width: 30%;
-                margin: 0;
+                margin-bottom: 1.5rem;
             }
         }
     }
 
     footer{
+        margin-top: 0;
         display: grid;
         grid-template-columns: 20% 1fr;
         grid-template-rows: auto auto;
         gap: 1rem;
         grid-template-areas: "social pages"
                                                 "social madeby";
+        
 
         .social-links-section{
             grid-area: social;
@@ -990,14 +1073,221 @@ footer{
                 align-items: center;
                 flex-wrap: wrap;
                 gap: 0.5em;
-                margin: 0;
-                padding: 0;
+            }
+        }
+
+        .footer-pages-section{
+            display: flex;
+            flex-direction: row;
+            gap: 5em;
+
+            .pages-section{
+                gap: 2em;
+            }
+
+            .cms-section{
+                gap: 2em;
+            }
+
+            .utility-pages-section{
+                gap: 2em;
             }
         }
 
         .madeby-section{
-            grid-area: madeby;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+            align-items: center;
             margin-top: 0;
+            
         }
+    }
+}
+
+// For Large Screen Laptops
+
+@media (min-width: 1440px) {
+    main{
+        .hero-section{
+            .text-section{
+                padding: 3rem 4rem;
+                h2{
+                    padding-bottom: 12rem;
+                }
+                h1{
+                    font-size: 4.2rem;
+                    line-height: 1.2;
+                }
+                p{
+                    font-size: 1.3rem;
+                    font-weight: 600;
+                    line-height: 1.6;
+                }
+            button{
+                margin: 3rem 0;
+            }
+            }
+        }
+
+        .stats-section{
+            display: flex;
+            justify-content: space-evenly;
+            padding: 2.5rem 2rem;
+
+                .stats-container{
+
+                    .stats-item{
+                        .stat-label{
+                            font-size: 1.2rem;
+                            word-spacing: 2px;
+                        }
+
+                        .stat-value{
+                            font-size: 4rem;
+                        }
+                    }
+                }
+            }
+
+        .philosophy-section{
+            .text-section{
+                padding: 3.5rem 4.2rem;
+
+                h2{
+                    font-size: 0.9rem;
+                    font-weight: 600;
+                    letter-spacing: 1px;
+                    padding-bottom: 12rem;
+                }
+                h1{
+                    font-size: 3rem;
+                }
+                .description{
+                    p{
+                        line-height: 1.5;
+                        font-weight: 600;
+                        word-spacing: 3px;
+                    }
+                }
+            }
+        }
+        .vision-section{
+            .text-section{
+                padding: 3rem 4rem;
+
+                h2{
+                    font-size: 0.9rem;
+                    font-weight: 600;
+                    letter-spacing: 2px;
+                    word-spacing: 2px;
+                    padding-bottom: 12rem;
+                }
+                h1{
+                    font-size: 3.1rem;
+                    line-height: 1.2;
+                }
+                .description{
+                    p{
+                        line-height: 1.5;
+                        font-weight: 600;
+                        word-spacing: 3px;
+                    }
+                }
+            }
+        }
+
+        .team-section{
+            .label-section{
+                padding: 1rem 1.5rem;
+                h1{
+                    font-size: 3rem;
+                }
+            }
+            .team-members{
+                .member{
+                    .member-info{
+                        display: flex;
+                        justify-content: space-between;
+                        width: 93%;
+                        border-radius: 0.5rem;
+
+                        span{
+                            font-weight: 600;
+                            letter-spacing: 1px;
+                        }
+                    }
+                }
+            }
+        }
+        .job-section{
+            .text-section{
+                padding: 3rem 4rem;
+                h2{
+                    font-size: 0.8rem;
+                    letter-spacing: 2px;
+                    padding: 0;
+                    font-weight: 700;
+                }
+                h1{
+                    font-size: 3rem;
+                    line-height: 1.2;
+                }
+            }
+        }
+
+        .contact-section{
+            padding: 3rem 4.5rem;
+            .heading{
+                h2{
+                    font-size: 0.8rem;
+                    font-family: "satoshi", Arial, Helvetica, sans-serif;
+                    letter-spacing: 1px;
+                }
+                h1{
+                    font-size: 5rem;
+                }
+            }
+            button{
+                padding: 1rem 0;
+                i{
+                    padding: 0;
+                }
+            }
+        }
+    }
+
+    footer{
+        padding: 1rem;
+        margin: 0;
+
+        .social-links-section{
+            margin: 0;
+            padding: 2rem 2.5rem;
+            h2{
+                font-size: 1.3rem;
+            }
+        }
+        .footer-pages-section{
+            justify-content: space-around;
+            padding: 3rem 0;
+            margin: 0;
+        }
+
+        .madeby-section{
+            padding: 2.5rem 2rem;
+        }
+    }
+}
+
+@media (min-width: 2560px) {
+    body{
+        display: grid;
+        grid-template-columns: 1fr min(1440px, 100%) 1fr;
+        gap: 0;
+    }
+    main, footer{
+        grid-column: 2;
+        padding: 0 1rem;
     }
 }
